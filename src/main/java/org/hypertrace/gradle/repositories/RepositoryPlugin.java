@@ -12,9 +12,9 @@ public class RepositoryPlugin implements Plugin<Project> {
 
     target.allprojects(
         project -> {
-          addMavenLocalToProject(target);
-          addMavenCentralToProject(target);
-          addHypertraceRepositoryToProject(target);
+          addMavenLocalToProject(project);
+          addMavenCentralToProject(project);
+          addHypertraceRepositoryToProject(project);
         });
   }
 
