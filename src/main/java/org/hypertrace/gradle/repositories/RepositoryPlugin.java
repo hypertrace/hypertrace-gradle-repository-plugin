@@ -5,7 +5,8 @@ import org.gradle.api.Project;
 
 public class RepositoryPlugin implements Plugin<Project> {
 
-  private static final String REPOSITORY_URL = "https://dl.bintray.com/hypertrace/maven";
+  private static final String HYPERTRACE_REPOSITORY_URL = "https://dl.bintray.com/hypertrace/maven";
+  private static final String CONFLUENT_REPOSITORY_URL = "https://packages.confluent.io/maven";
 
   @Override
   public void apply(Project target) {
@@ -15,6 +16,7 @@ public class RepositoryPlugin implements Plugin<Project> {
           addMavenLocalToProject(project);
           addMavenCentralToProject(project);
           addHypertraceRepositoryToProject(project);
+          addConfluentRepositoryToProject(project);
         });
   }
 
@@ -28,11 +30,21 @@ public class RepositoryPlugin implements Plugin<Project> {
         .maven(
             mavenArtifactRepository -> {
               mavenArtifactRepository.setName("hypertrace-maven");
-              mavenArtifactRepository.setUrl(REPOSITORY_URL);
+              mavenArtifactRepository.setUrl(HYPERTRACE_REPOSITORY_URL);
             });
   }
 
   private void addMavenCentralToProject(Project project) {
     project.getRepositories().mavenCentral();
+  }
+
+  private void addConfluentRepositoryToProject(Project project) {
+    project
+        .getRepositories()
+        .maven(
+            mavenArtifactRepository -> {
+              mavenArtifactRepository.setName("confluent-maven");
+              mavenArtifactRepository.setUrl(CONFLUENT_REPOSITORY_URL);
+            });
   }
 }
