@@ -5,7 +5,7 @@ import org.gradle.api.Project;
 
 public class RepositoryPlugin implements Plugin<Project> {
 
-  private static final String HYPERTRACE_REPOSITORY_URL = "https://hypertrace.jfrog.io/artifactory/gradle";
+  private static final String HYPERTRACE_REPOSITORY_URL = "https://hypertrace.jfrog.io/artifactory/maven";
   private static final String CONFLUENT_REPOSITORY_URL = "https://packages.confluent.io/maven";
 
   @Override
