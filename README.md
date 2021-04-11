@@ -4,7 +4,7 @@
 
 ### Purpose
 This plugin configures the target project and its descendants to use mavenLocal(), mavenCentral(), 
-the [Hypertrace maven](https://dl.bintray.com/hypertrace/maven) repository, and the
+the [Hypertrace maven](https://hypertrace.jfrog.io/artifactory/maven) repository, and the
 [Confluent maven](https://packages.confluent.io/maven) repository for dependency resolution.
 They are resolved in that order. Additional repositories can still be added directly as needed.
 

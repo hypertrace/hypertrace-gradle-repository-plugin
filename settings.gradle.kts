@@ -9,6 +9,6 @@ pluginManagement {
 }
 
 plugins {
-  id("org.hypertrace.version-settings") version "0.1.6"
+  id("org.hypertrace.version-settings") version "0.2.0"
 }
 rootProject.name = "hypertrace-gradle-repository-plugin"
