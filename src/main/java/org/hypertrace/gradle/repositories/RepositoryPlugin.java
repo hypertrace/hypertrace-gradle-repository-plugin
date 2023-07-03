@@ -18,7 +18,6 @@ public class RepositoryPlugin implements Plugin<Project> {
           addMavenCentralToProject(project);
           addHypertraceRepositoryToProject(project);
           addConfluentRepositoryToProject(project);
-          GuavaRule.addToProjectIfJavaBased(project);
         });
   }
 
